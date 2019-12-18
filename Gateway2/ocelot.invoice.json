@@ -1,11 +1,11 @@
 ﻿{
   "ReRoutes": [
     {
-      "UpstreamPathTemplate": "/api/invoice/{all}",
+      "UpstreamPathTemplate": "/api/invoic{all}",
       "UpstreamHttpMethod": [
         "Get"
       ],
-      "DownstreamPathTemplate": "/api/{all}",
+      "DownstreamPathTemplate": "/api/invoic{all}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
