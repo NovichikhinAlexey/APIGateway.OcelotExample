@@ -1,0 +1,35 @@
+﻿{
+  "ReRoutes": [
+    {
+      "UpstreamPathTemplate": "/v1/customer/half",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/customer/half",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5005
+        }
+      ],
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": true
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/{all}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5005,
+        }
+      ],
+      "UpstreamPathTemplate": "/api/{all}",
+      "UpstreamHttpMethod": [ "Get" ]
+    }
+  ],
+  "GlobalConfiguration": {
+  }
+}

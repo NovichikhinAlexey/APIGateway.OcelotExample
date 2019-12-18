@@ -1,0 +1,23 @@
+﻿{
+  "ReRoutes": [
+    {
+      "UpstreamPathTemplate": "/api/invoice/{all}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/{all}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5006
+        }
+      ],
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": true
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+  }
+}

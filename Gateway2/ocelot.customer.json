@@ -1,0 +1,23 @@
+﻿{
+  "ReRoutes": [
+    {
+      "UpstreamPathTemplate": "/api/customer/{all}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/{all}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5005
+        }
+      ],
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": true
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+  }
+}
